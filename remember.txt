@@ -1,0 +1,33 @@
+$env:FLASK_APP = "main.py"
+$env:FLASK_DEBUG = "1"
+flask --app main.py run -h localhost -p 8080     /запустить flask
+
+
+pip install flask
+pip install fastapi
+pip3 install uvicorn      (uvicorn main:app --reload) - запуск файла
+
+
+
+@app.route('/about/<username>')
+def about_page(username):
+    return f'<h1>This is the about page of {username}</h1>'
+
+
+<link rel = "icon" type="image/jpg" href = "{{ url_for('static', filename='images/logo/crt.jpeg')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../static/base.css">
+
+
+
+    #GET - GET an information
+#POST -Create something new
+#PUT - update
+#DELETE - delete something
+
+from fastapi import FastAPI
+app = FastAPI()
+
+def index():
+    return {"message": "Hello World"}
